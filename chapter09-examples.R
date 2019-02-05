@@ -22,7 +22,7 @@ Sigma[1,1] == sum((L[1,])^2) + Psi[1,1]
 # Example 9.4 (based on Example 8.5)
 rm(list=ls())
 
-dat <- read.table("T8-4.DAT")
+dat <- read.table("data/T8-4.DAT")
 names(dat) <- c("JPMorgan","Citibank","WellsFargo","RoyalDutchShell","ExxonMobil")
 X <- as.matrix(dat)
 n <- nrow(X)
@@ -71,7 +71,7 @@ factanal(dat,2,rotation="varimax")
 # Example Big 5 http://openpsychometrics.org/_rawdata/BIG5.zip 
 rm(list=ls())
 
-dat <- read.table(file="BIG5/data.csv",sep="\t",header=TRUE)
+dat <- read.table(file="data/BIG5/data.csv",sep="\t",header=TRUE)
 factanal(dat[,8:57],5,rotation="none")$loadings
 fit <- factanal(dat[,8:57],5,rotation="varimax")
 print(fit$loadings,cutoff=0.3)

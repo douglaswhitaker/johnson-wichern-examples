@@ -2,7 +2,7 @@
 # Example 6.1
 rm(list=ls())
 
-dat <- read.table("T6-1.dat")
+dat <- read.table("data/T6-1.dat")
 names(dat) <- c("BOD.com","SS.com","BOD.sta","SS.sta")
 
 alpha <- 0.05
@@ -33,7 +33,7 @@ d.bar[2,1] + sqrt(p*(n-1)/(n-p)*qf(1-alpha,p,n-p))*sqrt(Sd[2,2]/n)
 rm(list=ls())
 alpha <- 0.05
 
-dat <- read.table("T6-2.dat")
+dat <- read.table("data/T6-2.dat")
 C <- matrix(c(-1,-1,1,1,
               1,-1,1,-1,
               1,-1,-1,1),byrow=TRUE,ncol=4)
@@ -221,7 +221,7 @@ C.crit <- qchisq(1-alpha,v)
 # Example 6.13
 rm(list=ls())
 
-dat <- read.table("T6-4.dat")
+dat <- read.table("data/T6-4.dat")
 names(dat) <- c("ExtrusionRate","Additive","TearRes","Gloss","Opacity")
 
 # For computerized approaches - make appropriate columns factors, but this can be really annoying so don't do it in dat

@@ -23,7 +23,7 @@ rm(list=ls())
 alpha <- 0.10
 mu0 <- matrix(c(4,50,10),ncol=1)
 
-dat <- read.table("T5-1.DAT")
+dat <- read.table("data/T5-1.DAT")
 names(dat) <- c("Sweat_Rate","Sodium","Potassium")
 
 qqnorm(dat$Sweat_Rate)
@@ -46,8 +46,8 @@ rm(list=ls())
 
 alpha <- 0.05
 
-dat.closed <- read.table("T4-1.DAT") # Door closed
-dat.open <- read.table("T4-5.DAT") # Door Open
+dat.closed <- read.table("data/T4-1.DAT") # Door closed
+dat.open <- read.table("data/T4-5.DAT") # Door Open
 dat <- data.frame(closed=dat.closed[,1]^.25, 
                   open=dat.open[,1]^.25)
 
@@ -186,7 +186,7 @@ for (i in 1:7){
 # Example 5.8
 rm(list=ls())
 
-dat <- read.table("T5-8.DAT")
+dat <- read.table("data/T5-8.DAT")
 names(dat) <- c("Legal","Extraordinary","Holdover","COA","Meeting")
 n <- nrow(dat)
 
@@ -239,7 +239,7 @@ identify(x=1:length(d),y=d)
 # Example 5.11
 rm(list=ls())
 
-dat <- read.table("T5-9.dat")
+dat <- read.table("data/T5-9.dat")
 names(dat) <- c("Voltage","Current","Feed_Speed","Gas_Flow")
 
 qqnorm(dat[,1]);qqnorm(dat[,2]);qqnorm(dat[,3]);qqnorm(dat[,4])

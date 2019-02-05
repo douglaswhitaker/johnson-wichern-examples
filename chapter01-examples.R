@@ -74,7 +74,7 @@ for(i in 1:2){
 print(Sn==Sn2)
 
 # Example (like 1.3, from Exercise 1.27)
-dat <- read.table("T1-11.dat")
+dat <- read.table("data/T1-11.dat")
 head(dat)
 names(dat) <- c("Size","Visitors")
 head(dat)
@@ -108,7 +108,7 @@ ggMarginal(
 # Example 1.5
 rm(list=ls())
 
-dat <- read.table("T1-2.DAT")
+dat <- read.table("data/T1-2.DAT")
 names(dat) <- c("Density","MachineD","CrossD")
 pairs(~Density+MachineD+CrossD,data=dat,main="Scatterplot Matrix")
 pairs(~Density+MachineD+CrossD,data=dat,main="Scatterplot Matrix", pch=19) # note the ... in the ? description
@@ -119,7 +119,7 @@ scatterplot.matrix(~Density+MachineD+CrossD,data=dat,main="Scatterplot Matrix")
 
 # Example 1.6
 rm(list=ls())
-dat <- read.table("T1-3.dat")
+dat <- read.table("data/T1-3.dat")
 names(dat) <- c("Mass","SVL","HLS")
 
 # Lots of ways 
@@ -143,7 +143,7 @@ plot3d(dat$Mass,dat$SVL,dat$HLS,pch=sex) # this library doesn't support pch... d
 
 # Example 1.8
 rm(list=ls())
-dat <- read.table("T1-2.DAT")
+dat <- read.table("data/T1-2.DAT")
 names(dat) <- c("Density","MachineD","CrossD")
 pairs(~Density+MachineD+CrossD,data=dat,main="Scatterplot Matrix")
 
@@ -155,7 +155,7 @@ clicked.points <- panel.link.splom(pch=19,col='green')
 
 # Example 1.9
 rm(list=ls())
-dat <- read.table("T4-3.DAT")
+dat <- read.table("data/T4-3.DAT")
 library(rgl)
 plot3d(dat$V2,dat$V3,dat$V4)
 library(scatterplot3d)
@@ -165,7 +165,7 @@ scatterplot3d(dat$V4,dat$V2,dat$V3)
 
 # Example 1.10
 rm(list=ls())
-dat <- read.table("T1-4.dat") # the filenames generally aren't case-sensitive, at least on Windows
+dat <- read.table("data/T1-4.dat") # the filenames generally aren't case-sensitive, at least on Windows
 names(dat) <- c("Wt2","Wt3","Wt4","Wt5","Lngth2","Lngth3","Lngth4","Lngth5") # no spaces in column names... using "." instead is okay (that's what they are automatically changed to when importing at least)
 
 library(reshape)
@@ -194,7 +194,7 @@ par(mfrow=c(1,1))
 
 # Example 1.11
 rm(list=ls())
-dat <- read.table("T12-4.DAT")
+dat <- read.table("data/T12-4.DAT")
 
 library(fmsb)
 dat.tmp <- dat[,1:8]

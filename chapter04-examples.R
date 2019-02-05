@@ -57,7 +57,7 @@ plot(q,xo,pch=19)
 
 
 # Example 4.10
-dat <- read.table("T4-1.DAT")
+dat <- read.table("data/T4-1.DAT")
 names(dat) <- c("Radiation")
 
 xo <- sort(dat$Radiation)
@@ -111,7 +111,7 @@ chisq.quantiles <- qchisq(((1:n)-0.5)/n,df=2)
 plot(y=sort(d),x=chisq.quantiles,pch=19)
 
 # Example 4.14 
-dat <- read.table("T4-3.DAT")
+dat <- read.table("data/T4-3.DAT")
 names(dat) <- c("x1","x2","x3","x4","d2")
 n <- nrow(dat)
 chisq.quantiles <- qchisq(((1:n)-0.5)/n,df=4)
@@ -125,7 +125,7 @@ trellis.focus('panel',1,1)
 clicked.points <- panel.link.splom(pch=19,col='green')
 
 # Example 4.16
-dat <- read.table("T4-1.DAT")
+dat <- read.table("data/T4-1.DAT")
 names(dat) <- c("Radiation")
 n <- nrow(dat)
 

@@ -54,7 +54,7 @@ p <- ncol(R)
 # Example 8.3
 rm(list=ls())
 
-dat <- read.table("T8-5.DAT")
+dat <- read.table("data/T8-5.DAT")
 names(dat) <- c("TotalPop","ProfDegree","Employed","GovEmp","MedianHome")
 
 X <- as.matrix(dat)
@@ -77,7 +77,7 @@ e[,2]*sqrt(l[2])/sqrt(diag(S))
 # Example 8.4
 rm(list=ls())
 
-dat <- read.table("T6-9.dat")
+dat <- read.table("data/T6-9.dat")
 X1 <- dat[which(dat[,4]=="male"),1:3]
 X <- sapply(X1,log)
 n <- nrow(X)
@@ -106,7 +106,7 @@ screeplot(prcomp(X),type="lines")
 # Example 8.5 
 rm(list=ls())
 
-dat <- read.table("T8-4.DAT")
+dat <- read.table("data/T8-4.DAT")
 names(dat) <- c("JPMorgan","Citibank","WellsFargo","RoyalDutchShell","ExxonMobil")
 X <- as.matrix(dat)
 n <- nrow(X)
@@ -128,7 +128,7 @@ sum(l[1:2])/p
 # Example 8.7
 rm(list=ls())
 
-dat <- read.table("T6-9.dat")
+dat <- read.table("data/T6-9.dat")
 X1 <- dat[which(dat[,4]=="male"),1:3]
 X <- sapply(X1,log)
 n <- nrow(X)
@@ -158,7 +158,7 @@ plot(pr.fit$x[,2],pr.fit$x[,1])
 # Example 8.8
 rm(list=ls())
 
-dat <- read.table("T8-4.DAT")
+dat <- read.table("data/T8-4.DAT")
 names(dat) <- c("JPMorgan","Citibank","WellsFargo","RoyalDutchShell","ExxonMobil")
 X <- as.matrix(dat)
 n <- nrow(X)
@@ -218,7 +218,7 @@ rk <- c()
 # Example 8.10
 rm(list=ls())
 
-dat <- read.table("T5-8.DAT")
+dat <- read.table("data/T5-8.DAT")
 names(dat) <- c("Legal","Extraordinary","Holdover","COA","Meeting")
 
 X <- as.matrix(dat)
